@@ -24,7 +24,7 @@
       <input type="submit" class="fadeIn fourth" value="Log In">
 
       <?php
-      if (isset($_POST['login'])) {
+      if (isset($_POST['login']) && ) {
           echo $_POST['login'];
          }
 

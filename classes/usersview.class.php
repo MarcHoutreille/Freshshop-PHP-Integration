@@ -1,5 +1,6 @@
 <?php 
 // USERS VIEW
+
 class UsersView extends Users {
 
     public function showUser($name) {

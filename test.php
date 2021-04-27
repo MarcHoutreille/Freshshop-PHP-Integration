@@ -14,6 +14,12 @@ include('includes/autoloader.inc.php')
      <?php 
      $usersObj = new UsersView();
      $usersObj->showUser("John");
+
+     $newUser = new UsersContr();
+     $newUser->createUser("test@test.com", "The", "Created User", "testtest","1999");
+     echo "<br>";
+     $showNewUser = new UsersView();
+     $showNewUser->showUser("The");
      ?>
 
      

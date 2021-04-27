@@ -14,12 +14,11 @@ class Users extends Db {
         return $results;
     }
 
-    public function setUser($email,$firstname,$lastname,$password,$dateofbirth) {
-        $sql = 'INSERT INTO users(email, firstname, lastname, password, dateofbirth) VALUES (?, ?, ?, ?, ?)';
+    public function setUser($email,$firstname,$lastname,$password,) {
+        $sql = 'INSERT INTO users(email, firstname, lastname, password) VALUES ( ?, ?, ?, ?)';
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$email,$firstname,$lastname,$password,$dateofbirth]);
+        $stmt->execute([$email,$firstname,$lastname,$password]);
 
     }
 
-    }
 }
