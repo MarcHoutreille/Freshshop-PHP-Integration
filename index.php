@@ -1,3 +1,7 @@
+<?php 
+include 'includes/autoloader.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
