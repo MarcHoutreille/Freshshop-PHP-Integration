@@ -53,7 +53,7 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="my-account.php"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        <li><a href="my-account.php"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="contact-us.php"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>

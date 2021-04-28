@@ -20,7 +20,7 @@ if (empty($_POST["email"])) {
 if (empty($_POST["subject"])) {
     $errorMSG .= "Subject is required ";
 } else {
-    $subject = $_POST["guest"];
+    $subject = $_POST["subject"];
 }
 
 // MESSAGE
@@ -42,12 +42,7 @@ $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "guest: ";
-$Body .= $guest;
-$Body .= "\n";
-$Body .= "event: ";
-$Body .= $event;
-$Body .= "\n";
+
 $Body .= "Message: ";
 $Body .= $message;
 $Body .= "\n";

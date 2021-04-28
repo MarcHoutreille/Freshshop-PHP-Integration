@@ -53,7 +53,7 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="my-account.php"><i class="fas fa-headset"></i> Contact Us</a></li>
+                        <li><a href="my-account.php"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
                             <li><a href="contact-us.php"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
@@ -236,7 +236,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" name="name" placeholder="Subject" required data-error="Please enter your Subject">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required data-error="Please enter your Subject">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -381,9 +381,9 @@
 					<div class="col-lg-4 col-md-12 col-sm-12">
 						<div class="footer-top-box">
 							<h3>Newsletter</h3>
-							<form class="newsletter-box" action="newsletter_post.php" method="post">
+							<form class="newsletter-box">
 								<div class="form-group">
-									<input class="" type="email" name="email" placeholder="Email Address*" />
+									<input class="" type="email" name="Email" placeholder="Email Address*" />
 									<i class="fa fa-envelope"></i>
 								</div>
 								<button class="btn hvr-hover" type="submit">Submit</button>
