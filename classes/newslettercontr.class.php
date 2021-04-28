@@ -2,15 +2,14 @@
 
 class NewsletterContr extends Newsletter {
 
-    
+
     public function emailCheck($email) {
         if ($this->availableCheck($email) == 0) {
             $this->setEmail($email);
-            echo "successfully added to db !";
-            echo $email;
+            echo "Thank you very much for subscribing to our newsletter.";
         } else {
-            echo "email is already in db ! ";
-            echo $email;
+            echo "Your email already exists in our database.";
+
         }
     }
 

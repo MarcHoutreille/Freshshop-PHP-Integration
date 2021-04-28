@@ -110,7 +110,7 @@
 									<input class="" type="email" name="email" placeholder="Email Address*" />
 									<i class="fa fa-envelope"></i>
 								</div>
-								<button class="btn hvr-hover" type="submit">Submit</button>
+								<button class="btn hvr-hover" name="submit" type="submit">Submit</button>
 							</form>
 						</div>
 					</div>
