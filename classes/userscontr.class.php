@@ -3,18 +3,18 @@
 
 class UsersContr extends Users {
 
-    public function createUser($email,$firstname,$lastname,$password) {
+    public function createUser_base($email,$firstname,$lastname,$password) {
         $this->setUser($email,$firstname,$lastname,$password);
     }
 
-    public function verifySignUp($firstname,$lastname,$email,$password,$password_confirm) {
+    public function createUser($firstname,$lastname,$email,$password,$password_confirm) {
 
         if ((!empty($firstname)) & (!empty($lastname)) & (!empty($email)) & (!empty($password)) & (!empty($password_confirm))) {
-            echo "All info are there";
-            if ($password == $password_confirm) {
-                echo "Passwords are matching";
+            echo "All info are there <br>";
+            if ($password != $password_confirm) & (preg_match({
+                echo "But passwords don't match ! <br>";
             } else {
-                echo "Password don't match :(";
+                echo 
             }
         } else {
             echo "NO :(";

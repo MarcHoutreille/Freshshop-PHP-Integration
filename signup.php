@@ -12,7 +12,7 @@
 <body>
 
 
-<form class="form-horizontal" action='actions/signup_post.php' method="POST">
+<form class="form-horizontal" action='signup_post.php' method="POST">
   <fieldset>
     <div id="legend">
       <legend class="">Register</legend>
