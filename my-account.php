@@ -2,7 +2,12 @@
 session_start();
 include('views/header.php');
 include('views/top.php');
+
+
+if (isset($_SESSION['fn'])) {
+
 ?>
+
 
     <!-- Start All Title Box -->
     <div class="all-title-box">
@@ -202,5 +207,8 @@ include('views/top.php');
     <!-- End My Account -->
 
     <?php
+} else {
+    include('login_2.php');
+}
 
 include('views/bottom.php');

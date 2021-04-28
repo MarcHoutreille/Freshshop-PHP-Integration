@@ -21,19 +21,19 @@
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="login-box" style="color:white;">
+                <div class="login-box flex" style="color:white;">
                     <?php
                     if (isset($_SESSION['fn']) & isset($_SESSION['ln'])) {
                         ?> 
-                        <p> welcome <?= $_SESSION['ln'] ?></p>
-                        <a href="logout.php" style="color:white;"> Log out </a>
+                        <p>
+                        <a href="logout.php" style="color:white;"> Log out </a></p>
                         
                         <?php
                     } else { ?> 
 
-                        <a style="color:white;" href="signup_1.php">Register Here</a>
+                        <a style="color:white;" href="signup.php">Register Here</a>
 
-                        <a style="color:white;" class="pl-2" href="login_1.php">Login</a>
+                        <a style="color:white;" class="pl-2" href="login.php">Login</a>
                     <?php
                     }
                     ?>

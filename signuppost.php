@@ -22,11 +22,10 @@ include('views/top.php');
 
                         <?php
                         if (isset($_POST['submit'])) {
-                            $email = $_POST['email'];
-
 
                             $newUser = new UsersContr();
-                            $newUser->tryLoginUser($email, $_POST['password']);
+                            $newUser->tryCreateUser($_POST['firstname'],$_POST['lastname'],$_POST['email'],$_POST['password'],$_POST['password_confirm']); 
+                            $newUser->tryLoginUser($_POST['email'], $_POST['password']);                           
                         } else {
                             echo "Our apologies, there was an error. Please try again.";
                         }

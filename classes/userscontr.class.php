@@ -22,7 +22,8 @@ class UsersContr extends Users
                 if ($this->availableCheck(strtolower($email)) == 0) {
                     if (preg_match("#^([a-zA-Z0-9._-]){1,}@([a-z0-9._-]){2,}\.([a-z]){2,4}$#", $email))  {
                         echo "User sucessfully created <br>";
-                        echo "Email : " . $email;
+                        echo "Email : " . $email . "<br>";
+                        // Add the user to the database
                         $this->setUser(strtolower($email), strtolower($firstname), strtolower($lastname), password_hash($password,PASSWORD_DEFAULT));
                     } else {
                         echo "Please enter valid email";
@@ -50,8 +51,8 @@ class UsersContr extends Users
             $_SESSION['ln'] = $lastname;
             
         
-            echo " successfully logged in !";
-            echo "<a href='index.php'> to index </a>";
+            echo "Successfully logged in !<br>";
+            echo "<strong><a href='index.php'> To index </a></strong><br>";
         } else {
             echo "incorrect username or password !";
         }
