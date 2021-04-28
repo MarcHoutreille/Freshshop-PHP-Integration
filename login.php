@@ -18,17 +18,10 @@
 
 
     <!-- Login Form -->
-    <form method="post" action="login.php">
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+    <form method="post" class="m-5" action="login_post.php">
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="email">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
       <input type="submit" class="fadeIn fourth" value="Log In">
-
-      <?php
-      if (isset($_POST['login']) && ) {
-          echo $_POST['login'];
-         }
-
-       ?>
     </form>
 
     <!-- Remind Passowrd -->

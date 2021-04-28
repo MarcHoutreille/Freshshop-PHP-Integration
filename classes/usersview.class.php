@@ -8,4 +8,14 @@ class UsersView extends Users {
         echo "Name : " . $results[0]['firstname'] . " " . $results[0]['lastname'];
 
     }
+
+    public function userAlreadyExists($email) {
+        $results = $this->availableCheck($email);
+        if ($results != 0) {
+            echo "email already exists !";
+        } else {
+            echo "email does not exist";
+        }
+    }
+    
 }
