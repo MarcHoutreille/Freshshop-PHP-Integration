@@ -21,10 +21,15 @@ include('includes/autoloader.inc.php')
      echo "<br>";
      $showNewUser = new UsersView();
      $showNewUser->showUser("The");
-     */
-
+     
      $signupObj = new UsersContr();
      $signupObj->getpassword("marc.houtreille@gmail.com");
+     */
+
+
+        
+     $newNews = new NewsletterContr();
+     $newNews->emailCheck("marchoutreille@gmail.com");
      ?>
 
      
