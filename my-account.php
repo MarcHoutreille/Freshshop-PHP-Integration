@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -53,9 +58,9 @@
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
+                            <li><a href="my-account.php"><i class="fa fa-user s_color"></i> My Account</a></li>
                             <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
+                            <li><a href="contact-us.php"><i class="fas fa-headset"></i> Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -201,7 +206,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>My Account</h2>
+                    <h2>Welcome <?= ucwords($_SESSION['fn']) . " " . ucwords($_SESSION['ln']) ?></h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Shop</a></li>
                         <li class="breadcrumb-item active">My Account</li>
@@ -216,8 +221,8 @@
     <div class="my-account-box-main">
         <div class="container">
             <div class="my-account-page">
-            <p>test</p>
             
+
                 <div class="row">
                 
                     <div class="col-lg-4 col-md-12">

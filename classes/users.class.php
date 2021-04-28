@@ -5,7 +5,7 @@
 class Users extends Db {
 
 
-    protected function getUser($name) {
+    protected function getUserInfo($name) {
         $sql = 'SELECT * FROM users WHERE firstname = ?';
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$name]);
@@ -13,6 +13,16 @@ class Users extends Db {
         $results = $stmt->fetchAll();
         return $results;
     }
+
+    protected function getUserInfoFromMail($email) {
+        $sql = 'SELECT * FROM users WHERE email = ?';
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$email]);
+
+        $results = $stmt->fetchAll();
+        return $results;
+    }
+
 
     protected function setUser($email,$firstname,$lastname,$password) {
         $sql = 'INSERT INTO users(email, firstname, lastname, password) VALUES ( ?, ?, ?, ?)';

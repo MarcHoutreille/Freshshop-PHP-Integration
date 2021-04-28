@@ -43,9 +43,14 @@ class UsersContr extends Users
         $isPasswordCorrect = password_verify($password, $req['password']);
         if ($isPasswordCorrect) {
             session_start();
-            $_SESSION['id'] = $email;
-            $_SESSION['password'] = $password;
-            echo "successfully logged in !";
+            $results = $this->getUserInfoFromMail($email);
+            $firstname = $results[0]['firstname'];
+            $lastname = $results[0]['lastname'];   
+            $_SESSION['fn'] = $firstname;
+            $_SESSION['ln'] = $lastname;
+            $emailToken = $_SESSION['id'];
+            echo $emailToken;
+            echo " successfully logged in !";
             echo "<a href='index.php'> to index </a>";
         } else {
             echo "incorrect username or password !";
