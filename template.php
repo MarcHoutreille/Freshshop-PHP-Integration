@@ -203,6 +203,8 @@
 	
 	<div class="box-add-products">
 		<div class="container">
+
+        <!--
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="offer-box-products">
@@ -216,6 +218,7 @@
 				</div>
 			</div>
 		</div>
+        -->
 	</div>
 
 
