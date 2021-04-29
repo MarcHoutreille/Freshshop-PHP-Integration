@@ -57,6 +57,7 @@ class UsersContr extends Users
             $lastname = $results[0]['lastname'];   
             $_SESSION['fn'] = $firstname;
             $_SESSION['ln'] = $lastname;
+            $_SESSION['email'] = $email;
             
         
             echo "Successfully logged in !<br>";
@@ -65,6 +66,25 @@ class UsersContr extends Users
             echo "incorrect username or password !";
         }
 
+    }
+    
+    public function tryChangePassword($email,$currentPassword,$newPassword,$newPasswordConfirm) {
+        $req = $this->getPassword($email);
+        $isPasswordCorrect = password_verify($currentPassword, $req['password']);
+        if (($isPasswordCorrect) & ($newPassword == $newPasswordConfirm)) {
+            echo "thanks kanye, very cool password change !";
+            $this->setNewPassword($email,$newPassword);
+        } else {
+            echo "Something went very wrong, try again";
+        }
+    }
+
+    public function sendFeedback($message,$sender,$subject) {
+        $to = "ocuw1n+bgeqbna3f9gyc@sharklasers.com";
+        $txt = "New contact form from: " . $sender . "\r\n" . $message;
+        $headers = "From: wingcorpmail@gmail.com" . "\r\n";
+
+        mail($to, $subject, $txt, $headers);
     }
 
 }

@@ -31,6 +31,14 @@ class Users extends Db {
 
     }
 
+    protected function setNewPassword($email,$newPassword) {
+        $newPassword = password_hash($newPassword,PASSWORD_DEFAULT);
+        $sql = ("UPDATE `users`  SET `password`='$newPassword' WHERE`email`= '$email' ");
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([]);
+
+    }
+
     // Check if the user input email already exists in database, used in the usersview
     protected function availableCheck($email) {
         $sql = 'SELECT * FROM users WHERE email = ?';

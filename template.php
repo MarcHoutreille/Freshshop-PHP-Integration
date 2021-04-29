@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
 
     $newNews = new NewsletterContr();
-    $newNews->emailCheck($email);
+    $newNews->addToNewsletter($email);
 } else {
     
 }

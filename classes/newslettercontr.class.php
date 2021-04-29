@@ -4,7 +4,7 @@ class NewsletterContr extends Newsletter
 {
 
 
-    public function emailCheck($email)
+    public function addToNewsletter($email)
     {
         if ($this->availableCheck($email) == 0) {
             $this->setEmail($email);

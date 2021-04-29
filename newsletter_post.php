@@ -21,7 +21,7 @@ include('views/top.php');
                             $email = $_POST['email'];
                         
                             $newNews = new NewsletterContr();
-                            $newNews->emailCheck($email);
+                            $newNews->addToNewsletter($email);
                             
                         } else {
                             echo "Our apologies, there was an error. Please try again.";

@@ -58,7 +58,8 @@ include('views/top.php');
                                     <div class="row">
                                         <!-- ARTICLES GO HERE -->
                                         <?php 
-                                        include('views/webshoparticle.php')
+                                        $webshopArticles = new WebshopView;
+                                        $webshopArticles->showAllArticles();
                                         
                                         ?>
                                         
