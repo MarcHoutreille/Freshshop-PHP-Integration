@@ -22,7 +22,15 @@ class UsersContr extends Users
                 if ($this->availableCheck(strtolower($email)) == 0) {
                     if (preg_match("#^([a-zA-Z0-9._-]){1,}@([a-z0-9._-]){2,}\.([a-z]){2,4}$#", $email))  {
                         echo "User sucessfully created <br>";
-                        echo "Email : " . $email . "<br>";
+                        echo "We've sent you an e-mail";
+                        echo "Login : " . $email . "<br>";
+                        // CAN BE SEGMENTED
+                        $to = $email;
+                        $subject = "Welcome to FreshShop !";
+                        $txt = "Thank you very much for creating your account, you won't be dissapointed ! \r\nYou will received promotions and trash mail every milliseconds of your life, for your whole life ! \r\n Thanks very much !";
+                        $headers = "From: wingcorpmail@gmail.com" . "\r\n";
+            
+                        mail($to, $subject, $txt, $headers);
                         // Add the user to the database
                         $this->setUser(strtolower($email), strtolower($firstname), strtolower($lastname), password_hash($password,PASSWORD_DEFAULT));
                     } else {

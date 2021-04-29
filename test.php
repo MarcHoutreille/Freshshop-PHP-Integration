@@ -24,12 +24,26 @@ include('includes/autoloader.inc.php')
      
      $signupObj = new UsersContr();
      $signupObj->getpassword("marc.houtreille@gmail.com");
+
+    $newNews = new NewsletterContr();
+     $newNews->emailCheck("marchoutreille@gmail.com");
+
+         $newArticleView = new WebshopView();
+    $newArticleView->showArticles();
+
      */
+
+$to = "ocs10h+3p9wovkdw59pk@sharklasers.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: wingcorpmail@gmail.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+
+mail($to,$subject,$txt,$headers);
 
 
         
-     $newNews = new NewsletterContr();
-     $newNews->emailCheck("marchoutreille@gmail.com");
+
      ?>
 
      

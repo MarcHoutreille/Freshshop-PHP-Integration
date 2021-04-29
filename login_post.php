@@ -27,12 +27,19 @@ include('views/top.php');
 
                             $newUser = new UsersContr();
                             $newUser->tryLoginUser($email, $_POST['password']);
-                        } else {
-                            echo "Our apologies, there was an error. Please try again.";
-                        }
-
-
                         ?>
+
+                            <script>
+                                setTimeout(function() {
+                                    window.location = 'my-account.php';
+                                }, 1200);
+                            </script> <?php
+                                    } else {
+                                        echo "Our apologies, there was an error. Please try again.";
+                                    }
+
+
+                                        ?>
 
 
                     </h2>
