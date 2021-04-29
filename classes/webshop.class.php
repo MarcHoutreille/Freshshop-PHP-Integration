@@ -2,6 +2,17 @@
 
 class Webshop extends Db
 {
+    protected function getArticle($id)
+    {
+        $sql = "SELECT * FROM `webshop` WHERE id = '$id' ";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+
+        $results = $stmt->fetchAll();
+        return $results;
+    }
+
+
     protected function getAllArticles()
     {
         $sql = 'SELECT * FROM webshop';

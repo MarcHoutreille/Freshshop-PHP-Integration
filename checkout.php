@@ -11,7 +11,7 @@ include('views/top.php');
                 <div class="col-lg-12">
                     <h2>Checkout</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                    <li class="breadcrumb-item"><a href="#">Shop</a></li>
                         <li class="breadcrumb-item active">Checkout</li>
                     </ul>
                 </div>
@@ -28,6 +28,8 @@ include('views/top.php');
                     <div class="title-left">
                         <h3>Account Login</h3>
                     </div>
+
+                  
                     <h5><a data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Click here to Login</a></h5>
                     <form class="mt-3 collapse review-form-box" id="formLogin">
                         <div class="form-row">

@@ -33,14 +33,8 @@ include('includes/autoloader.inc.php')
 
      */
 
-$to = "ocs10h+3p9wovkdw59pk@sharklasers.com";
-$subject = "My subject";
-$txt = "Hello world!";
-$headers = "From: wingcorpmail@gmail.com" . "\r\n" .
-"CC: somebodyelse@example.com";
-
-mail($to,$subject,$txt,$headers);
-
+    $getArticle = new WebshopView();
+    $getArticle->showArticleDetails(4);
 
         
 
