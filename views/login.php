@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <div class="container text-center" style="padding-top:175px;padding-bottom:175px;width:25%">
 <h1 class="mt-2" >LOG IN TO YOUR ACCOUNT</h1>
     <form method="post" action="login_post.php">

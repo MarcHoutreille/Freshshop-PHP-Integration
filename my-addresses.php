@@ -61,7 +61,7 @@ if (isset($_SESSION['fn'])) {
 
 <?php
 } else {
-    include('login_2.php');
+    include('views/login.php');
 }
 
 include('views/bottom.php');

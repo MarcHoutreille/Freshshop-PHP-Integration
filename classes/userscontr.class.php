@@ -67,7 +67,8 @@ class UsersContr extends Users
         }
 
     }
-    
+    // CHANGE PASSWORD METHOD
+
     public function tryChangePassword($email,$currentPassword,$newPassword,$newPasswordConfirm) {
         $req = $this->getPassword($email);
         $isPasswordCorrect = password_verify($currentPassword, $req['password']);
@@ -78,7 +79,7 @@ class UsersContr extends Users
             echo "Something went very wrong, try again";
         }
     }
-
+    // CONTACT FORM METHOD 
     public function sendFeedback($message,$sender,$subject) {
         $to = "ocuw1n+bgeqbna3f9gyc@sharklasers.com";
         $txt = "New contact form from: " . $sender . "\r\n" . $message;

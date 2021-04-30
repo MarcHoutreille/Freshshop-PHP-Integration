@@ -116,7 +116,7 @@ if (isset($_SESSION['fn'])) {
     </script>
 <?php
 } else {
-    include('login_2.php');
+    include('views/login.php');
 }
 
 include('views/bottom.php');

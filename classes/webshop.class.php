@@ -32,4 +32,7 @@ class Webshop extends Db
         $results = $stmt->fetchAll();
         return $results;
     }
+
+    
+    
 }
